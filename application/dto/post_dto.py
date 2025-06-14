@@ -21,10 +21,6 @@ class PostDTO:
     created_at: datetime
 
 class PostUpdateDTO(BaseModel):
-    """
-    DTO для обновления поста блога.
-    Все поля опциональны - обновляются только переданные значения.
-    """
     title: Optional[str] = None
     content: Optional[str] = None
     category: Optional[str] = None

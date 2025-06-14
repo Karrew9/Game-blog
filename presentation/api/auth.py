@@ -32,9 +32,8 @@ async def login(
     )
 
     if not user:
-        # Возвращаем обратно в форму с ошибкой
         return templates.TemplateResponse(
-            "login.html",  # Создайте отдельный шаблон для страницы входа
+            "login.html",
             {
                 "request": request,
                 "error": "Неверное имя пользователя или пароль"
@@ -53,7 +52,7 @@ async def login(
         value=f"Bearer {access_token}",
         httponly=True,
         max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
-        secure=True,  # Для HTTPS
+        secure=True,
         samesite="lax"
     )
 
@@ -69,7 +68,6 @@ async def register(
         password_confirm: str = Form(...),
         db: Session = Depends(get_db)
 ):
-    # Проверка совпадения паролей
     if password != password_confirm:
         return templates.TemplateResponse(
             "register.html",
@@ -78,7 +76,6 @@ async def register(
         )
 
     try:
-        # Создаем нового пользователя
         new_user = UserModel(
             username=username,
             email=email,
@@ -89,20 +86,18 @@ async def register(
         db.add(new_user)
         db.commit()
 
-        # Создаем токен
         access_token = create_access_token(
             data={"sub": new_user.username},
             expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
         )
 
-        # Устанавливаем куки и перенаправляем
         response = RedirectResponse(url="/", status_code=303)
         response.set_cookie(
             key="access_token",
             value=f"Bearer {access_token}",
             httponly=True,
             max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
-            secure=False,  # True для HTTPS
+            secure=False,
             samesite="lax"
         )
 

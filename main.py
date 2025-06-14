@@ -19,7 +19,6 @@ from infrastructure.database.seed import seed_database
 from core.config import settings
 from core.logger import logger
 
-# Функция для получения сессии БД
 def get_db():
     db = SessionLocal()
     try:
@@ -28,16 +27,13 @@ def get_db():
         db.close()
 
 def create_app():
-    # Удаляем все таблицы (для разработки)
     Base.metadata.drop_all(bind=engine)
 
-    # Создаем таблицы с новыми колонками
     Base.metadata.create_all(bind=engine)
 
-    # Заполняем базу тестовыми данными
     db = SessionLocal()
     try:
-        seed_database(db)  # Вызываем функцию заполнения
+        seed_database(db)
     except Exception as e:
         logger.error(f"Ошибка при заполнении БД: {e}")
     finally:
@@ -51,7 +47,7 @@ def create_app():
 
     app.add_middleware(
         TrustedHostMiddleware,
-        allowed_hosts=["*"]  # Для разработки
+        allowed_hosts=["*"]
     )
 
     app.include_router(auth_router, prefix="/auth")
@@ -59,7 +55,7 @@ def create_app():
     app.mount("/static", StaticFiles(directory="static"), name="static")
     templates = Jinja2Templates(directory="templates")
 
-    @app.get("/", response_class=HTMLResponse)  # Явно указываем класс ответа
+    @app.get("/", response_class=HTMLResponse)
     async def read_root(
             request: Request,
             db: Session = Depends(get_db),
@@ -93,7 +89,6 @@ def create_app():
             current_user: Optional[UserModel] = Depends(get_current_user_optional)
     ):
         try:
-            # Пагинация и сортировка по дате
             offset = (page - 1) * per_page
             posts = db.query(PostModel) \
                 .options(joinedload(PostModel.author)) \
@@ -138,7 +133,7 @@ def create_app():
             {
                 "request": request,
                 "app_title": settings.APP_TITLE,
-                "csrf_token": generate_csrf_token()  # Функция из security.py
+                "csrf_token": generate_csrf_token()
             }
         )
 
@@ -176,7 +171,6 @@ def create_app():
             db: Session = Depends(get_db)
     ):
         try:
-            # Получаем пост с автором и комментариями
             post = db.query(PostModel) \
                 .options(
                 joinedload(PostModel.author),
@@ -187,18 +181,14 @@ def create_app():
 
             if not post:
                 raise HTTPException(status_code=404, detail="Post not found")
-
-            # Получаем похожие посты
             similar_posts = db.query(PostModel) \
                 .filter(PostModel.author_id == post.author_id, PostModel.id != post.id) \
                 .order_by(func.random()) \
                 .limit(3) \
                 .all()
 
-            # Получаем текущего пользователя
             current_user = await get_current_user_optional(request, db)
 
-            # Форматируем дату для шаблона
             post.created_at_str = post.created_at.strftime('%d.%m.%Y в %H:%M')
             for comment in post.comments:
                 comment.created_at_str = comment.created_at.strftime('%d.%m.%Y в %H:%M')
@@ -226,11 +216,10 @@ def create_app():
             current_user: UserModel = Depends(get_current_user)
     ):
         try:
-            # Получаем пост с проверкой авторства
             post = db.query(PostModel) \
                 .filter(
                 PostModel.id == post_id,
-                PostModel.author_id == current_user.id  # Только автор может редактировать
+                PostModel.author_id == current_user.id
             ) \
                 .first()
 
@@ -265,15 +254,13 @@ def create_app():
             current_user: UserModel = Depends(get_current_user)
     ):
         try:
-            # Валидация CSRF токена
             if not validate_csrf_token(csrf_token):
                 raise HTTPException(status_code=400, detail="Invalid CSRF token")
 
-            # Получаем пост для редактирования
             post = db.query(PostModel) \
                 .filter(
                 PostModel.id == post_id,
-                PostModel.author_id == current_user.id  # Проверка авторства
+                PostModel.author_id == current_user.id
             ) \
                 .first()
 
@@ -283,10 +270,9 @@ def create_app():
                     detail="Post not found or you don't have permission to edit it"
                 )
 
-            # Обновляем данные
             post.title = title
             post.content = content
-            post.updated_at = datetime.utcnow()  # Добавляем метку обновления
+            post.updated_at = datetime.utcnow()
 
             db.commit()
             db.refresh(post)
@@ -309,16 +295,13 @@ def create_app():
             current_user: UserModel = Depends(get_current_user),
             db: Session = Depends(get_db)
     ):
-        # Валидация CSRF токена
         if not validate_csrf_token(csrf_token):
             raise HTTPException(status_code=400, detail="Неверный CSRF токен")
 
-        # Проверяем существование поста
         post = db.query(PostModel).filter(PostModel.id == post_id).first()
         if not post:
             raise HTTPException(status_code=404, detail="Post not found")
 
-        # Создаем комментарий
         new_comment = CommentModel(
             content=content,
             author_id=current_user.id,
@@ -341,7 +324,6 @@ def create_app():
             current_user: Optional[UserModel] = Depends(get_current_user_optional)
     ):
         try:
-            # Получаем пользователя
             user = db.query(UserModel) \
                 .filter(UserModel.id == user_id) \
                 .first()
@@ -351,7 +333,6 @@ def create_app():
 
             avatar_url = user.avatar_url
 
-            # Пагинация постов пользователя
             offset = (page - 1) * per_page
             posts = db.query(PostModel) \
                 .filter(PostModel.author_id == user_id) \
@@ -400,7 +381,6 @@ def create_app():
             if not current_user:
                 raise HTTPException(status_code=401, detail="Not authenticated")
 
-            # Пагинация постов текущего пользователя
             offset = (page - 1) * per_page
             posts = db.query(PostModel) \
                 .filter(PostModel.author_id == current_user.id) \
@@ -471,23 +451,19 @@ def create_app():
             current_user: UserModel = Depends(get_current_user)
     ):
         try:
-            # 1. Проверка текущего пароля
             if not current_user.verify_password(current_password):
                 raise HTTPException(
                     status_code=400,
                     detail={"field": "current_password", "message": "Неверный текущий пароль"}
                 )
 
-            # 2. Получаем свежую версию пользователя из БД
             user = db.query(UserModel).filter(UserModel.id == current_user.id).first()
             if not user:
                 raise HTTPException(status_code=404, detail="User not found")
 
-            # 3. Подготовка данных для обновления
             update_data = {}
 
             if username and username != user.username:
-                # Проверка уникальности username
                 existing_user = db.query(UserModel).filter(
                     UserModel.username == username,
                     UserModel.id != user.id
@@ -500,7 +476,6 @@ def create_app():
                 update_data["username"] = username
 
             if email and email != user.email:
-                # Проверка уникальности email
                 existing_user = db.query(UserModel).filter(
                     UserModel.email == email,
                     UserModel.id != user.id
@@ -518,24 +493,20 @@ def create_app():
             if new_password:
                 update_data["password_hash"] = hash_password(new_password)
 
-            # 4. Обработка аватара
             if avatar:
                 try:
                     upload_dir = "static/uploads/avatars"
                     os.makedirs(upload_dir, exist_ok=True)
 
-                    # Удаляем старый аватар только если это не базовая аватарка
                     if user.avatar_path and not user.avatar_path.startswith('/static/images/default-avatar'):
                         old_path = user.avatar_path.lstrip('/')
                         if os.path.exists(old_path):
                             os.remove(old_path)
 
-                    # Сохраняем новый аватар
                     file_ext = os.path.splitext(avatar.filename)[1].lower()
                     filename = f"user_{user.id}{file_ext}"
                     file_path = f"/{upload_dir}/{filename}"
 
-                    # Проверка на существование файла
                     counter = 1
                     while os.path.exists(file_path.lstrip('/')):
                         filename = f"user_{user.id}_{counter}{file_ext}"
@@ -553,14 +524,11 @@ def create_app():
                         detail={"field": "avatar", "message": f"Ошибка загрузки аватара: {str(e)}"}
                     )
 
-            # 5. Применяем обновления
             if update_data:
                 try:
-                    # Обновляем запись в БД
                     db.query(UserModel).filter(UserModel.id == user.id).update(update_data)
                     db.commit()
 
-                    # Обновляем объект user актуальными данными
                     db.refresh(user)
 
                     return {
@@ -599,14 +567,12 @@ def create_app():
             password_confirm: str = Form(...),
             db: Session = Depends(get_db)
     ):
-        # Проверка совпадения паролей
         if password != password_confirm:
             raise HTTPException(
                 status_code=400,
                 detail="Пароли не совпадают"
             )
 
-        # Проверка уникальности username и email
         existing_user = db.query(UserModel).filter(
             (UserModel.username == username) | (UserModel.email == email)
         ).first()
@@ -617,12 +583,11 @@ def create_app():
                 detail="Пользователь с таким именем или email уже существует"
             )
 
-        # Создание нового пользователя
         new_user = UserModel(
             username=username,
             email=email,
             avatar_path="static/images/default-avatar.png",
-            password_hash=hash_password(password),  # Хешируем пароль!
+            password_hash=hash_password(password),
             is_active=True,
             created_at=datetime.utcnow()
         )
@@ -630,7 +595,6 @@ def create_app():
         db.add(new_user)
         db.commit()
 
-        # Автоматический вход после регистрации
         access_token = create_access_token(
             data={"sub": new_user.username},
             expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -654,7 +618,6 @@ def create_app():
             db: Session = Depends(get_db)
     ):
         try:
-            # Аутентификация пользователя
             user = authenticate_user(db, username=username, password=password)
 
             if not user:
@@ -664,19 +627,16 @@ def create_app():
                     detail="Неверное имя пользователя или пароль"
                 )
 
-            # Создание JWT токена
             access_token = create_access_token(
                 data={"sub": user.username, "user_id": str(user.id)},
                 expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
             )
 
-            # Настройка ответа с куки
             response = RedirectResponse(
                 url="/",
                 status_code=status.HTTP_303_SEE_OTHER
             )
 
-            # Безопасные настройки куки
             cookie_kwargs = {
                 "key": "access_token",
                 "value": f"Bearer {access_token}",
@@ -685,13 +645,11 @@ def create_app():
                 "samesite": "lax"
             }
 
-            # Добавляем secure только если включено в настройках
             if settings.SECURE_COOKIES:
                 cookie_kwargs["secure"] = True
 
             response.set_cookie(**cookie_kwargs)
 
-            # Логирование успешного входа
             logger.info(f"User {user.username} successfully logged in")
             return response
 

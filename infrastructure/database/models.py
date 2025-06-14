@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from passlib.context import CryptContext
-from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Boolean, JSON
+from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 
 from infrastructure.database.session import Base
@@ -16,7 +16,7 @@ class UserModel(Base):
     email = Column(String(100), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
     is_active = Column(Boolean, default=True)
-    avatar_path = Column(String(255))  # Путь к аватарке
+    avatar_path = Column(String(255))
     bio = Column(String(500))
     created_at = Column(DateTime, default=datetime.utcnow)
     last_login = Column(DateTime, nullable=True)

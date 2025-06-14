@@ -24,15 +24,12 @@ class User:
 
     @property
     def avatar_display_url(self) -> str:
-        """Возвращает URL аватара или дефолтный, если не установлен"""
         return self.avatar_url or "/static/images/default-avatar.png"
 
     async def save_avatar(self, avatar_file: Union[UploadFile, None]) -> Optional[str]:
-        """Сохраняет аватар и возвращает новый URL"""
         if not avatar_file:
             return None
 
-        # Удаляем старый аватар, если он существует
         if self.avatar_url and not self.avatar_url.startswith('/static/images/default-avatar'):
             try:
                 old_path = self.avatar_url.lstrip('/')
@@ -41,7 +38,6 @@ class User:
             except Exception as e:
                 print(f"Error deleting old avatar: {e}")
 
-        # Сохраняем новый файл
         upload_dir = "static/uploads/avatars"
         os.makedirs(upload_dir, exist_ok=True)
 

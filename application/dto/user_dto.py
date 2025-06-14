@@ -26,10 +26,6 @@ class TokenData(BaseModel):
     username: Optional[str] = None
 
 class UserUpdateDTO(BaseModel):
-    """
-    DTO для обновления данных пользователя.
-    Все поля опциональны - обновляются только переданные значения.
-    """
     username: Optional[str] = None
     email: Optional[EmailStr] = None
     password: Optional[str] = None
@@ -50,7 +46,6 @@ class UserUpdateDTO(BaseModel):
         if v is not None:
             if len(v) < 8:
                 raise ValueError('Password must be at least 8 characters long')
-            # Дополнительные проверки пароля при необходимости
         return v
 
     @field_validator('bio')

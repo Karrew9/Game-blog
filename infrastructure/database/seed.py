@@ -5,7 +5,6 @@ from infrastructure.database.models import UserModel, PostModel, CommentModel
 from datetime import datetime, timedelta
 
 def seed_database(session: Session):
-    # Очищаем таблицы
     session.query(CommentModel).delete()
     session.query(PostModel).delete()
     session.query(UserModel).delete()
@@ -66,7 +65,6 @@ def seed_database(session: Session):
     session.add_all(users)
     session.commit()
 
-    # Создаем посты
     posts = [
         PostModel(
             title="Обзор Cyberpunk 2077: Phantom Liberty",
@@ -132,7 +130,6 @@ def seed_database(session: Session):
     session.add_all(posts)
     session.commit()
 
-    # Создаем комментарии
     comments = [
         CommentModel(
             content="Полностью согласен! Phantom Liberty это то, каким должно быть DLC - полноценная история с новыми механиками.",

@@ -19,7 +19,6 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     try:
         return pwd_context.verify(plain_password, hashed_password)
     except (ValueError, UnknownHashError):
-        # Если хеш поврежден или пароль хранится в чистом виде
         return False
 
 
@@ -73,7 +72,7 @@ async def get_current_user_optional(
 
     try:
         payload = jwt.decode(
-            token.split()[1],  # Удаляем "Bearer "
+            token.split()[1],
             settings.SECRET_KEY,
             algorithms=[settings.ALGORITHM]
         )
@@ -91,7 +90,6 @@ def authenticate_user(db: Session, username: str, password: str) -> Optional[Use
     if not user:
         return None
 
-    # Добавьте логирование для отладки
     print(f"Checking password for user: {username}")
     print(f"Stored hash: {user.password_hash}")
 

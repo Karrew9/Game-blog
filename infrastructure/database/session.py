@@ -15,10 +15,6 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 def get_db():
-    """
-    Генератор сессий для зависимостей FastAPI.
-    Автоматически закрывает сессию после использования.
-    """
     db = SessionLocal()
     try:
         yield db
@@ -29,7 +25,6 @@ def get_db():
     finally:
         db.close()
 
-# Альтернативный вариант для использования в роутах FastAPI
 def get_db_session():
     db = SessionLocal()
     try:

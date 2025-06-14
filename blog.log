@@ -1,0 +1,820 @@
+[2025-06-06 00:08:09,935] INFO in main: Application started successfully
+[2025-06-06 00:10:56,157] INFO in main: Application started successfully
+[2025-06-06 00:12:23,974] INFO in main: Application started successfully
+[2025-06-06 00:22:48,017] INFO in main: Application started successfully
+[2025-06-06 00:37:49,613] INFO in main: Application started successfully
+[2025-06-06 00:42:29,315] INFO in main: Application started successfully
+[2025-06-06 01:03:48,886] INFO in main: Application started successfully
+[2025-06-06 01:06:16,262] INFO in main: Application started successfully
+[2025-06-06 01:09:20,376] INFO in main: Application started successfully
+[2025-06-06 01:14:21,138] INFO in main: Application started successfully
+[2025-06-06 01:18:39,180] INFO in main: Application started successfully
+[2025-06-06 01:27:44,652] INFO in main: Application started successfully
+[2025-06-06 01:32:55,311] INFO in main: Application started successfully
+[2025-06-06 01:40:37,935] INFO in main: Application started successfully
+[2025-06-06 01:42:32,151] INFO in main: Application started successfully
+[2025-06-06 01:44:44,167] INFO in main: Application started successfully
+[2025-06-06 01:50:07,315] INFO in main: Application started successfully
+[2025-06-06 01:54:40,808] INFO in main: Application started successfully
+[2025-06-06 02:01:34,472] INFO in main: Application started successfully
+[2025-06-06 02:02:27,106] INFO in main: Application started successfully
+[2025-06-06 02:02:41,981] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:03:51,963] INFO in main: Application started successfully
+[2025-06-06 02:04:08,032] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:08:10,590] INFO in main: Application started successfully
+[2025-06-06 02:08:36,516] INFO in main: Application started successfully
+[2025-06-06 02:08:51,090] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:15:48,423] INFO in main: Application started successfully
+[2025-06-06 02:27:39,609] INFO in main: Application started successfully
+[2025-06-06 02:28:41,551] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:40:51,773] INFO in main: Application started successfully
+[2025-06-06 02:40:55,387] ERROR in main: Error in read_post: 404: Post not found
+[2025-06-06 02:40:57,824] ERROR in main: Error in read_post: 404: Post not found
+[2025-06-06 02:41:26,956] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:42:23,094] INFO in main: Application started successfully
+[2025-06-06 02:47:35,436] INFO in main: Application started successfully
+[2025-06-06 02:48:08,386] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 02:51:57,868] INFO in main: Application started successfully
+[2025-06-06 02:52:04,976] ERROR in main: Error loading user profile: 'users/profile.html' not found in search path: 'templates'
+[2025-06-06 02:52:04,977] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-06 02:52:33,946] INFO in main: Application started successfully
+[2025-06-06 02:53:27,891] INFO in main: Application started successfully
+[2025-06-06 02:55:10,693] INFO in main: Application started successfully
+[2025-06-06 02:55:56,498] INFO in main: Application started successfully
+[2025-06-06 02:56:07,457] ERROR in main: Error listing posts: 'posts/list.html' not found in search path: 'templates'
+[2025-06-06 02:56:07,458] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-06 02:56:48,524] INFO in main: Application started successfully
+[2025-06-06 02:56:49,294] ERROR in main: Error listing posts: 'post' is undefined
+[2025-06-06 02:56:49,294] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-06 02:56:51,652] ERROR in main: Error listing posts: 'post' is undefined
+[2025-06-06 02:56:51,653] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-06 02:57:56,081] INFO in main: Application started successfully
+[2025-06-06 03:02:56,704] INFO in main: Application started successfully
+[2025-06-06 03:03:10,443] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-06 03:03:10,443] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-06 03:03:13,659] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-06 03:03:13,659] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-06 03:03:39,001] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 03:06:57,821] INFO in main: Application started successfully
+[2025-06-06 03:07:12,212] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\blog\venv\lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-06 03:07:20,981] ERROR in main: Login error: 'Settings' object has no attribute 'SECURE_COOKIES'
+[2025-06-06 03:07:22,303] ERROR in main: Login error: 'Settings' object has no attribute 'SECURE_COOKIES'
+[2025-06-13 17:24:35,892] INFO in main: Application started successfully
+[2025-06-13 17:24:49,540] INFO in main: Application started successfully
+[2025-06-13 17:28:55,035] INFO in main: Application started successfully
+[2025-06-13 17:37:41,137] INFO in main: Application started successfully
+[2025-06-13 17:43:36,638] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-13 17:43:36,640] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-13 17:43:40,113] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-13 17:43:40,113] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-13 17:44:04,939] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-13 17:44:04,940] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-13 17:45:31,782] WARNING in main: Failed login attempt for username: Karrew9
+[2025-06-13 17:45:31,783] ERROR in main: Login error: 401: Неверное имя пользователя или пароль
+[2025-06-13 17:47:13,982] INFO in main: Application started successfully
+[2025-06-13 17:47:29,859] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 17:47:45,411] INFO in main: Application started successfully
+[2025-06-13 17:48:01,430] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 18:35:07,772] INFO in main: Application started successfully
+[2025-06-13 22:36:30,356] INFO in main: Application started successfully
+[2025-06-13 22:39:04,874] INFO in main: Application started successfully
+[2025-06-13 22:45:36,532] INFO in main: Application started successfully
+[2025-06-13 22:50:08,058] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:06:23,020] INFO in main: Application started successfully
+[2025-06-13 23:08:32,496] INFO in main: Application started successfully
+[2025-06-13 23:09:02,273] INFO in main: Application started successfully
+[2025-06-13 23:19:54,323] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:35:32,381] INFO in main: Application started successfully
+[2025-06-13 23:35:46,848] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:41:14,420] INFO in main: Application started successfully
+[2025-06-13 23:41:24,049] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:41:26,442] ERROR in session: Database error: 1 validation error for UserDTO
+is_active
+  Field required [type=missing, input_value={'id': 11, 'username': 'M...13, 20, 41, 24, 459266)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-06-13 23:47:05,336] INFO in main: Application started successfully
+[2025-06-13 23:47:20,652] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:54:13,288] INFO in main: Application started successfully
+[2025-06-13 23:54:21,217] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-13 23:58:00,872] INFO in main: Application started successfully
+[2025-06-13 23:58:10,311] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:03:53,941] INFO in main: Application started successfully
+[2025-06-14 00:04:04,948] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:27:21,373] INFO in main: Application started successfully
+[2025-06-14 00:27:33,955] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:29:21,075] INFO in main: Application started successfully
+[2025-06-14 00:29:31,937] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:29:34,201] ERROR in main: Error loading settings: Encountered unknown tag 'csrf_token'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+[2025-06-14 00:29:34,201] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 00:30:06,435] INFO in main: Application started successfully
+[2025-06-14 00:30:14,969] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:30:17,082] ERROR in main: Error loading settings: Encountered unknown tag 'csrf_token'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+[2025-06-14 00:30:17,083] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 00:30:55,314] INFO in main: Application started successfully
+[2025-06-14 00:30:57,646] ERROR in main: Error loading settings: 401: Not authenticated
+[2025-06-14 00:30:57,647] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 00:31:14,741] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:31:16,928] ERROR in main: Error loading settings: Encountered unknown tag 'csrf_token'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+[2025-06-14 00:31:16,928] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 00:34:07,686] INFO in main: Application started successfully
+[2025-06-14 00:34:15,697] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:34:17,330] ERROR in main: Error loading settings: 'csrf_token' is undefined
+[2025-06-14 00:34:17,331] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 00:36:17,667] INFO in main: Application started successfully
+[2025-06-14 00:36:26,186] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:37:40,858] INFO in main: Application started successfully
+[2025-06-14 00:37:48,840] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:37:57,324] ERROR in session: Database error: 'UserModel' object has no attribute 'verify_password'
+[2025-06-14 00:37:58,242] ERROR in session: Database error: 'UserModel' object has no attribute 'verify_password'
+[2025-06-14 00:42:47,714] INFO in main: Application started successfully
+[2025-06-14 00:42:56,822] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:43:05,751] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Column expression, FROM clause, or other columns clause element expected, got <class 'domain.entities.user.User'>."}
+[2025-06-14 00:44:42,133] INFO in main: Application started successfully
+[2025-06-14 00:44:57,980] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:45:13,973] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Column expression, FROM clause, or other columns clause element expected, got <class 'domain.entities.user.User'>."}
+[2025-06-14 00:47:54,941] INFO in main: Application started successfully
+[2025-06-14 00:48:03,767] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:48:13,685] ERROR in session: Database error: 500: {'message': 'Ошибка при обновлении данных: keywords must be strings'}
+[2025-06-14 00:50:35,183] INFO in main: Application started successfully
+[2025-06-14 00:50:53,383] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:51:03,478] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Instance '<UserModel at 0x22023037110>' is not persistent within this Session"}
+[2025-06-14 00:51:09,948] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Instance '<UserModel at 0x22022fd6cb0>' is not persistent within this Session"}
+[2025-06-14 00:55:53,883] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:55:54,925] ERROR in main: Ошибка при заполнении БД: list index out of range
+[2025-06-14 00:55:54,936] INFO in main: Application started successfully
+[2025-06-14 00:56:50,148] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 00:56:51,194] ERROR in main: Ошибка при заполнении БД: list index out of range
+[2025-06-14 00:56:51,206] INFO in main: Application started successfully
+[2025-06-14 01:01:15,552] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:01:16,600] ERROR in main: Ошибка при заполнении БД: list index out of range
+[2025-06-14 01:01:16,612] INFO in main: Application started successfully
+[2025-06-14 01:05:20,245] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:05:21,314] INFO in main: Application started successfully
+[2025-06-14 01:10:14,255] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:10:15,329] INFO in main: Application started successfully
+[2025-06-14 01:13:23,721] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:13:24,800] INFO in main: Application started successfully
+[2025-06-14 01:19:17,983] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:19:19,073] INFO in main: Application started successfully
+[2025-06-14 01:21:02,448] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:21:03,515] INFO in main: Application started successfully
+[2025-06-14 01:22:58,297] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:22:59,363] INFO in main: Application started successfully
+[2025-06-14 01:23:38,130] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Instance '<UserModel at 0x1d14856fed0>' is not persistent within this Session"}
+[2025-06-14 01:35:08,790] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:35:09,883] INFO in main: Application started successfully
+[2025-06-14 01:36:34,661] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:36:35,728] INFO in main: Application started successfully
+[2025-06-14 01:37:04,119] ERROR in session: Database error: 500: {'message': "Ошибка при обновлении данных: Instance '<UserModel at 0x1fc4170bcf0>' is not persistent within this Session"}
+[2025-06-14 01:39:17,327] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:39:18,394] INFO in main: Application started successfully
+[2025-06-14 01:42:15,098] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:42:16,194] INFO in main: Application started successfully
+[2025-06-14 01:43:25,479] ERROR in main: Login error: 'Settings' object has no attribute 'SECURE_COOKIES'
+[2025-06-14 01:48:06,294] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:48:07,365] INFO in main: Application started successfully
+[2025-06-14 01:48:19,531] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 01:48:29,330] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:48:30,384] INFO in main: Application started successfully
+[2025-06-14 01:54:45,940] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:54:47,022] INFO in main: Application started successfully
+[2025-06-14 01:54:57,227] ERROR in main: Error loading edit form: 'posts/create_post.html' not found in search path: 'templates'
+[2025-06-14 01:54:57,228] ERROR in session: Database error: 500: Internal Server Error
+[2025-06-14 01:58:59,886] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 01:59:00,987] INFO in main: Application started successfully
+[2025-06-14 02:00:14,270] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:00:15,359] INFO in main: Application started successfully
+[2025-06-14 02:01:47,384] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:01:48,454] INFO in main: Application started successfully
+[2025-06-14 02:19:26,821] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:19:27,839] ERROR in main: Ошибка при заполнении БД: 'content' is an invalid keyword argument for PostModel
+[2025-06-14 02:19:27,852] INFO in main: Application started successfully
+[2025-06-14 02:31:11,728] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:31:12,792] INFO in main: Application started successfully
+[2025-06-14 02:31:15,109] ERROR in session: Database error: 'infrastructure.database.models.PostModel object' has no attribute 'content'
+[2025-06-14 02:35:35,851] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:35:36,939] INFO in main: Application started successfully
+[2025-06-14 02:35:38,236] ERROR in session: Database error: No filter named 'extract_text_from_blocks'.
+[2025-06-14 02:35:56,434] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:35:57,506] INFO in main: Application started successfully
+[2025-06-14 02:35:58,449] ERROR in session: Database error: No filter named 'extract_text_from_blocks'.
+[2025-06-14 02:36:25,540] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:36:26,620] INFO in main: Application started successfully
+[2025-06-14 02:39:47,550] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:39:48,628] INFO in main: Application started successfully
+[2025-06-14 02:39:49,816] ERROR in session: Database error: Encountered unknown tag 'do'. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+[2025-06-14 02:41:17,734] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:42:39,443] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:42:40,509] INFO in main: Application started successfully
+[2025-06-14 02:42:42,134] ERROR in session: Database error: Encountered unknown tag 'do'. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+[2025-06-14 02:43:48,556] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:43:49,633] INFO in main: Application started successfully
+[2025-06-14 02:46:44,756] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:46:45,837] INFO in main: Application started successfully
+[2025-06-14 02:48:26,347] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:48:27,421] INFO in main: Application started successfully
+[2025-06-14 02:48:50,694] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 02:50:14,204] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 02:57:34,484] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 02:57:35,577] INFO in main: Application started successfully
+[2025-06-14 02:57:51,209] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 03:00:09,526] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:00:10,597] INFO in main: Application started successfully
+[2025-06-14 03:02:53,947] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:02:55,018] INFO in main: Application started successfully
+[2025-06-14 03:04:14,067] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 03:08:43,234] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:08:44,298] INFO in main: Application started successfully
+[2025-06-14 03:12:49,544] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:12:50,612] INFO in main: Application started successfully
+[2025-06-14 03:15:57,325] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:15:58,410] INFO in main: Application started successfully
+[2025-06-14 03:16:18,141] ERROR in session: Database error: Expecting value: line 1 column 1 (char 0)
+[2025-06-14 03:22:31,593] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:22:32,672] INFO in main: Application started successfully
+[2025-06-14 03:22:37,011] ERROR in session: Database error: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+[2025-06-14 03:25:26,111] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:25:27,187] INFO in main: Application started successfully
+[2025-06-14 03:25:29,731] ERROR in session: Database error: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+[2025-06-14 03:27:16,546] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:27:17,611] INFO in main: Application started successfully
+[2025-06-14 03:28:43,439] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:28:45,691] INFO in main: Application started successfully
+[2025-06-14 03:29:21,733] ERROR in base_events: Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+    ~~~~~~~~~~^^
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 138, in run
+    return loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 234, in run_until_complete
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 286, in _run_once
+    handle._run()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 386, in __wakeup
+    self.__step()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 394, in step
+    step_orig(task, exc)
+    ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 293, in __step
+    self.__step_run_and_handle_result(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[2025-06-14 03:29:27,049] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:29:28,117] INFO in main: Application started successfully
+[2025-06-14 03:39:52,463] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:39:53,529] INFO in main: Application started successfully
+[2025-06-14 03:40:03,175] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 03:40:05,121] INFO in main: User Karrew9 successfully logged in
+[2025-06-14 03:42:28,964] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:42:30,039] INFO in main: Application started successfully
+[2025-06-14 03:43:21,882] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:43:50,848] INFO in main: Application started successfully
+[2025-06-14 03:44:03,881] ERROR in base_events: Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<Server.serve() done, defined at C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py:68> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\main.py", line 580, in run
+    server.run()
+    ~~~~~~~~~~^^
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 138, in run
+    return loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 234, in run_until_complete
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 286, in _run_once
+    handle._run()
+    ~~~~~~~~~~~^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 386, in __wakeup
+    self.__step()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\JetBrains\PyCharm 2025.1.2\plugins\python\helpers-pro\pydevd_asyncio\pydevd_nest_asyncio.py", line 394, in step
+    step_orig(task, exc)
+    ~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 293, in __step
+    self.__step_run_and_handle_result(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 304, in __step_run_and_handle_result
+    result = coro.send(None)
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Maxim\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[2025-06-14 03:44:05,991] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:44:07,081] INFO in main: Application started successfully
+[2025-06-14 03:45:46,988] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:45:48,062] INFO in main: Application started successfully
+[2025-06-14 03:45:55,851] ERROR in session: Database error: 'content' is an invalid keyword argument for PostModel
+[2025-06-14 03:52:48,269] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:52:49,342] INFO in main: Application started successfully
+[2025-06-14 03:54:34,502] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:54:35,580] INFO in main: Application started successfully
+[2025-06-14 03:56:27,276] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:56:28,351] INFO in main: Application started successfully
+[2025-06-14 03:59:14,516] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 03:59:15,613] INFO in main: Application started successfully
+[2025-06-14 04:00:35,134] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:00:36,206] INFO in main: Application started successfully
+[2025-06-14 04:06:54,770] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:06:55,841] INFO in main: Application started successfully
+[2025-06-14 04:07:07,891] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:07:08,985] INFO in main: Application started successfully
+[2025-06-14 04:07:44,520] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:07:45,593] INFO in main: Application started successfully
+[2025-06-14 04:10:18,445] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:10:19,525] INFO in main: Application started successfully
+[2025-06-14 04:14:55,064] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:14:56,157] INFO in main: Application started successfully
+[2025-06-14 04:15:29,924] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:15:31,006] INFO in main: Application started successfully
+[2025-06-14 04:17:33,531] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:17:34,604] INFO in main: Application started successfully
+[2025-06-14 04:19:34,401] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:19:35,480] INFO in main: Application started successfully
+[2025-06-14 04:20:10,539] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:20:11,608] INFO in main: Application started successfully
+[2025-06-14 04:21:42,341] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:21:43,418] INFO in main: Application started successfully
+[2025-06-14 04:22:46,706] WARNING in bcrypt: (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\Maxim\PycharmProjects\PythonProject\.venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[2025-06-14 04:22:47,790] INFO in main: Application started successfully

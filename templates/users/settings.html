@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Настройки аккаунта</h1>
+    
+    <form id="settings-form" class="mt-4" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Имя пользователя</label>
+            <input type="text" class="form-control" id="username" name="username"
+                   value="{{ user.username }}" required minlength="3" maxlength="50">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email"
+                   value="{{ user.email }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="bio" class="form-label">О себе</label>
+            <textarea class="form-control" id="bio" name="bio" rows="3"
+                      maxlength="500">{{ user.bio or '' }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="avatar" class="form-label">Аватар</label>
+            <input type="file" class="form-control" id="avatar" name="avatar" accept="image/*">
+            {% if user.avatar_url %}
+            <div class="mt-2">
+                <img src="{{ user.avatar_url }}" width="100" class="img-thumbnail">
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3">
+            <label for="current_password" class="form-label">Текущий пароль (для подтверждения изменений)</label>
+            <input type="password" class="form-control" id="current_password" name="current_password" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="new_password" class="form-label">Новый пароль</label>
+            <input type="password" class="form-control" id="new_password" name="new_password"
+                   placeholder="Оставьте пустым, если не хотите менять">
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            <button type="button" id="delete-account" class="btn btn-danger">Удалить аккаунт</button>
+        </div>
+
+        <div id="form-errors" class="alert alert-danger mt-3 d-none"></div>
+        <div id="form-success" class="alert alert-success mt-3 d-none"></div>
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('settings-form');
+    const errorAlert = document.getElementById('form-errors');
+    const successAlert = document.getElementById('form-success');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Сбрасываем состояния уведомлений
+        errorAlert.classList.add('d-none');
+        successAlert.classList.add('d-none');
+
+        try {
+            const formData = new FormData(form);
+
+            const response = await fetch('/settings', {
+                method: 'PUT',
+                body: formData,
+                headers: {
+                    'X-CSRF-Token': '{{ csrf_token }}'
+                }
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                successAlert.textContent = 'Настройки успешно сохранены!';
+                successAlert.classList.remove('d-none');
+
+                // Обновляем аватар, если он был изменен
+                if (formData.get('avatar')) {
+                    const avatarImg = document.querySelector('.img-thumbnail');
+                    if (avatarImg) {
+                        avatarImg.src = URL.createObjectURL(formData.get('avatar'));
+                    }
+                }
+
+                // Прокрутка к уведомлению
+                successAlert.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                errorAlert.textContent = result.detail || 'Произошла ошибка при сохранении';
+                errorAlert.classList.remove('d-none');
+                errorAlert.scrollIntoView({ behavior: 'smooth' });
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+            errorAlert.textContent = 'Сетевая ошибка. Попробуйте позже.';
+            errorAlert.classList.remove('d-none');
+            errorAlert.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    document.getElementById('delete-account').addEventListener('click', async function() {
+        if (confirm('Вы уверены, что хотите удалить свой аккаунт? Все ваши данные будут безвозвратно удалены.')) {
+            try {
+                const response = await fetch('/settings', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-Token': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        current_password: document.getElementById('current_password').value
+                    })
+                });
+
+                if (response.ok) {
+                    window.location.href = '/';
+                } else {
+                    const result = await response.json();
+                    alert(result.detail || 'Ошибка при удалении аккаунта');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Сетевая ошибка. Попробуйте позже.');
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

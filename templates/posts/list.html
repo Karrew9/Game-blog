@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app_title }}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Последние посты</h1>
+    {% if current_user %}
+    <a href="/posts/new" class="btn btn-success">
+        <i class="bi bi-plus-lg"></i> Новый пост
+    </a>
+    {% endif %}
+</div>
+
+{% if posts %}
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.content[:250] }}{% if post.content|length > 250 %}...{% endif %}</p>
+                    <a href="/posts/{{ post.id }}" class="btn btn-primary">
+                        <i class="bi bi-book"></i> Читать далее
+                    </a>
+                    {% if current_user and current_user.id == post.author_id %}
+                    <div class="btn-group float-end">
+                        <a href="/posts/{{ post.id }}/edit" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-pencil"></i> Редактировать
+                        </a>
+                        <a href="/posts/{{ post.id }}/delete" class="btn btn-sm btn-outline-danger">
+                            <i class="bi bi-trash"></i> Удалить
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <i class="bi bi-calendar"></i> {{ post.created_at.strftime('%d.%m.%Y') }}
+                            <i class="bi bi-clock ms-2"></i> {{ post.created_at.strftime('%H:%M') }}
+                        </div>
+                        <div>
+                            <i class="bi bi-person"></i>
+                            <a href="/users/{{ post.author.id }}" class="text-decoration-none">
+                                {{ post.author.username }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">
+        <h4 class="alert-heading">Пока нет постов</h4>
+        {% if current_user %}
+        <p>Вы можете создать первый пост!</p>
+        <a href="/posts/new" class="btn btn-primary">Создать пост</a>
+        {% else %}
+        <p>Авторизуйтесь, чтобы создать первый пост.</p>
+        {% endif %}
+    </div>
+{% endif %}
+{% endblock %}

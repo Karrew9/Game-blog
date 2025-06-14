@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} | {{ app_title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <article class="blog-post">
+                <h1 class="blog-post-title">{{ post.title }}</h1>
+                <p class="blog-post-meta">
+                    Опубликовано {{ post.created_at.strftime('%d.%m.%Y в %H:%M') }} |
+                    Автор: <a href="/users/{{ post.author.id }}">{{ post.author.username }}</a>
+                </p>
+
+                <div class="post-content">
+                    {% for block in post.blocks %}
+                        {% if block.type == "text" %}
+                            <p>{{ block.content.text }}</p>
+                        {% elif block.type == "image" %}
+                            <figure class="figure">
+                                <img src="{{ block.content.url }}"
+                                     class="figure-img img-fluid rounded"
+                                     alt="{{ block.content.caption }}">
+                                {% if block.content.caption %}
+                                <figcaption class="figure-caption text-center">
+                                    {{ block.content.caption }}
+                                </figcaption>
+                                {% endif %}
+                            </figure>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <hr>
+
+                {% if current_user and current_user.id == post.author_id %}
+                <div class="mt-3">
+                    <a href="/posts/{{ post.id }}/edit" class="btn btn-sm btn-outline-primary">
+                        Редактировать
+                    </a>
+                </div>
+                {% endif %}
+            </article>
+
+            <div class="comments-section mt-5">
+                <h3>Комментарии ({{ post.comments|length }})</h3>
+
+                {% if post.comments %}
+                    {% for comment in post.comments %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{ comment.author.username }}</h5>
+                                <small class="text-muted">
+                                    {{ comment.created_at.strftime('%d.%m.%Y в %H:%M') }}
+                                </small>
+                            </div>
+                            <p class="card-text">{{ comment.content }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="alert alert-info">Пока нет комментариев. Будьте первым!</div>
+                {% endif %}
+
+                {% if current_user %}
+                <div class="add-comment mt-4">
+                    <h4>Добавить комментарий</h4>
+                    <form method="post" action="/posts/{{ post.id }}/comments">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                        <div class="mb-3">
+                            <textarea class="form-control" name="content" rows="3" required
+                                      placeholder="Ваш комментарий..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+                {% else %}
+                <div class="alert alert-warning mt-4">
+                    Чтобы оставить комментарий, пожалуйста <a href="/auth/login">войдите</a>.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Об авторе
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.author.username }}</h5>
+                    <p class="card-text">Всего постов: {{ post.author.posts|length }}</p>
+                    <a href="/users/{{ post.author.id }}" class="btn btn-outline-primary">Все посты автора</a>
+                </div>
+            </div>
+
+            {% if similar_posts %}
+            <div class="card">
+                <div class="card-header">
+                    Похожие посты
+                </div>
+                <div class="list-group list-group-flush">
+                    {% for similar_post in similar_posts %}
+                    <a href="/posts/{{ similar_post.id }}" class="list-group-item list-group-item-action">
+                        {{ similar_post.title }}
+                        <small class="text-muted d-block">
+                            {{ similar_post.created_at.strftime('%d.%m.%Y') }}
+                        </small>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

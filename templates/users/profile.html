@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app_title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <div class="user-avatar">
+                        <img src="{{ user.avatar_url }}" alt="{{ user.username }}" class="rounded-circle" width="150">
+                    </div>
+                    <h2>{{ user.username }}</h2>
+                    <p class="text-muted">Зарегистрирован {{ user.created_at.strftime('%d.%m.%Y') }}</p>
+
+                    <div class="d-flex justify-content-around mb-3">
+                        <div>
+                            <h5 class="mb-0">{{ total_posts }}</h5>
+                            <small>Постов</small>
+                        </div>
+                    </div>
+
+                    {% if current_user and current_user.id == user.id %}
+                    <a href="/settings" class="btn btn-outline-primary btn-sm">Редактировать профиль</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h3 class="mb-4">Последние посты</h3>
+
+            {% if posts %}
+                {% for post in posts %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title h5">{{ post.title }}</h4>
+                        <p class="card-text text-muted small">
+                            {{ post.created_at.strftime('%d.%m.%Y в %H:%M') }}
+                        </p>
+                        <p class="card-text">{{ post.content|truncate(300) }}</p>
+                        <a href="/posts/{{ post.id }}" class="btn btn-sm btn-outline-primary">Читать</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% if pagination.total_pages > 1 %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if pagination.has_prev %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ pagination.page - 1 }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+
+                        {% for p in range(1, pagination.total_pages + 1) %}
+                        <li class="page-item {% if p == pagination.page %}active{% endif %}">
+                            <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+                        </li>
+                        {% endfor %}
+
+                        {% if pagination.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ pagination.page + 1 }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            {% else %}
+                <div class="alert alert-info">
+                    {% if current_user and current_user.id == user.id %}
+                        У вас пока нет постов. <a href="/posts/new">Создайте первый пост</a>!
+                    {% else %}
+                        У пользователя пока нет постов.
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
